@@ -5,7 +5,7 @@ This project involved designing and developing an end-to-end **Power BI business
 
 The solution provides a 360-degree view of the business, enabling data-driven decision-making for sales strategy, menu optimization, staff performance, and geographic expansion.
 
-**Live Dashboard Preview:** *(Note: Link to a live Power BI report or a video demo can be placed here)*
+
 
 ## Business Objectives
 -   **Empower Management:** Provide an at-a-glance overview of the company's health and long-term trajectory.
