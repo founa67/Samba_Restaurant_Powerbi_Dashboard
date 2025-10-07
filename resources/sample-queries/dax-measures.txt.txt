@@ -1,0 +1,56 @@
+Calendar = 
+VAR MinDate = MIN ( Sales[Date] )
+VAR MaxDate = MAX ( Sales[Date] )
+RETURN
+    ADDCOLUMNS (
+        CALENDAR ( MinDate, MaxDate ),
+        "Year", YEAR ( [Date] ),
+        "MonthNumber", MONTH ( [Date] ),
+        "MonthName", FORMAT ( [Date], "MMMM" ),
+        "Quarter", "Q" & FORMAT ( [Date], "Q" ),
+        "YearMonth", FORMAT ( [Date], "YYYY-MM" ),
+        "Day", DAY ( [Date] ),
+        "Weekday", FORMAT ( [Date], "dddd" ),
+        "WeekdayNumber", WEEKDAY ( [Date], 2 ),
+        "day_week",
+            SWITCH(
+                WEEKDAY([Date], 2),
+                1, "Mon",
+                2, "Tues",
+                3, "Wed",
+                4, "Thu",
+                5, "Fri",
+                6, "Sat",
+                7, "Sun",
+                BLANK()
+            )
+    )
+
+______________________________________________________________________________________________________
+
+Annual Target (7% vs LY Year) = VAR lyYear = [LY Year Sales]
+RETURN IF( ISBLANK(lyYear), BLANK(), lyYear * 1.07 )
+______________________________________________________________________________________________________
+
+KPI Color - Sales vs Target = 
+VAR pct = [Sales vs Target %]
+RETURN
+SWITCH(
+    TRUE(),
+    ISBLANK(pct), "#808080",          -- grey if no data
+    pct >= 1.00, "#00A400",           -- green (>=100%)
+    pct >= 0.95, "#FFC000",           -- yellow (95% - 99.99%)
+    pct < 0.95, "#FF0000",            -- red (<95%)
+    "#808080"
+)
+______________________________________________________________________________________________________
+
+Last Year Sales (LY) = 
+CALCULATE(
+    [Total Sales],
+    DATEADD('Calendar'[Date], -1, YEAR)
+)
+________________________________________________________________________________________________________
+
+LY Sales Same Month = 
+CALCULATE([Total Sales], SAMEPERIODLASTYEAR( DATESBETWEEN('Calendar'[Date], STARTOFMONTH('Calendar'[Date]), ENDOFMONTH('Calendar'[Date])) ))
