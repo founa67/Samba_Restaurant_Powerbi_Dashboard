@@ -61,7 +61,7 @@ Dynamic filters and slicers allow for deep, exploratory analysis:
 
 ## Project Documentation
 For a detailed breakdown of the process, please refer to the project documents:
--   **[Branch Management Dashboard](.documentation/business-requirements/Branch_Management_Dashboard_v2.pdf)** - Detailed view of operational KPIs and visuals.
+-   **[Branch Management Dashboard](./documentation/business-requirements/Branch_Management_Dashboard_v2.pdf))** - Detailed view of operational KPIs and visuals.
 -   **[Executive Dashboard](./Top_Management_Dashboard_v2.pdf)** - High-level strategic insights for leadership.
 -   **[Data Engineering & ETL Process](./Power_BI_Data_Engineering_ETL_v2.pdf)** - In-depth technical walkthrough of the data pipeline.
 
