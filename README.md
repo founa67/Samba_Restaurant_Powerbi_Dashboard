@@ -61,9 +61,9 @@ Dynamic filters and slicers allow for deep, exploratory analysis:
 
 ## Project Documentation
 For a detailed breakdown of the process, please refer to the project documents:
--   **[Branch Management Dashboard](./Branch_Management_Dashboard_v2.docx)** - Detailed view of operational KPIs and visuals.
--   **[Executive Dashboard](./Top_Management_Dashboard_v2.docx)** - High-level strategic insights for leadership.
--   **[Data Engineering & ETL Process](./Power_BI_Data_Engineering_ETL_v2.docx)** - In-depth technical walkthrough of the data pipeline.
+-   **[Branch Management Dashboard](./Branch_Management_Dashboard_v2.pdf)** - Detailed view of operational KPIs and visuals.
+-   **[Executive Dashboard](./Top_Management_Dashboard_v2.pdf)** - High-level strategic insights for leadership.
+-   **[Data Engineering & ETL Process](./Power_BI_Data_Engineering_ETL_v2.pdf)** - In-depth technical walkthrough of the data pipeline.
 
 ## Conclusion
 This Power BI dashboard successfully transformed 15 years of historical data for Samba Bar & Restaurant into a single source of truth. It moves beyond simple reporting to enable proactive, data-informed strategic decisions, empowering the management team to optimize operations, maximize profitability, and drive sustained future growth.
